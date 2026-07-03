@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Basem Ahmed — Software Developer &amp; Creative Technologist</title>
+    <meta name="description" content="Basem Ahmed: Software Developer specializing in C++, Web Development, and AI-driven workflows. Explore my portfolio to see how I turn complex problems into elegant solutions."/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet"/>
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <!-- ============================================
+         LIGHTBOX OVERLAY
+         ============================================ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <img alt="Basem Ahmed — Full View" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFZCN3SLPjYfnzHV4OvDnN-bAe7ysgiogkU72DqScjFJmCK5_HfCaOy35V4bc9d2XavNvcZvQnhFZObRChQ9CYRQBiGCodJZe4b5TDsf0doDp3DM_pnqPLyu195Mv5omP_To897CRbFZnvDl2hWH99e6J_9A8EDwYV_CE3Z9uYWsKTWmd4el0pXhgNRyzd7V0-g6cY_I7GHLiV_PtyErXUOnWl9Uxs5xigIwce9PhTtZPpeN4yG8dxSnd76jOOTq4LXvZAtIHF9xhX"/>
+    </div>
+
+    <!-- ============================================
+         MOBILE MENU
+         ============================================ -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-close" aria-label="Close menu">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- ============================================
+         BACK TO TOP
+         ============================================ -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <span class="material-symbols-outlined" style="font-size:26px;font-variation-settings:'FILL' 1;">keyboard_arrow_up</span>
+    </button>
+
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <header class="main-nav" id="main-nav">
+        <div class="container nav-inner">
+            <a href="#hero" class="nav-logo">Basem<span class="dot">.</span></a>
+
+            <nav class="nav-links">
+                <a class="nav-link" href="#about" data-section="about">About</a>
+                <a class="nav-link" href="#skills" data-section="skills">Skills</a>
+                <a class="nav-link" href="#experience" data-section="experience">Experience</a>
+                <a class="nav-link" href="#volunteer" data-section="volunteer">Volunteer</a>
+                <a class="nav-link" href="#contact" data-section="contact">Contact</a>
+            </nav>
+
+            <a class="nav-cta magnetic-btn" href="mailto:basemahmed0110@gmail.com">Hire Me</a>
+
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
+    <main>
+
+        <!-- ====== HERO ====== -->
+        <section class="hero" id="hero" data-nav-section="hero" style="position:relative;overflow:hidden;">
+            <canvas id="particle-canvas"></canvas>
+            <div class="parallax-blob blob-1" data-speed="0.03"></div>
+            <div class="parallax-blob blob-2" data-speed="0.05"></div>
+            <div class="parallax-blob blob-3" data-speed="0.02"></div>
+
+            <div class="container hero-inner">
+                <div class="hero-content reveal-left">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="text-label-sm" style="color:#dac2ae;">Open to Opportunities</span>
+                    </div>
+
+                    <h1 class="text-display-xl hero-title" style="color:#f0e0d2;">
+                        I Build Software<br/>
+                        <span class="text-gradient">That Solves Problems.</span>
+                    </h1>
+
+                    <div class="text-body-lg hero-subtitle" style="color:#dac2ae;">
+                        <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a class="btn btn-primary magnetic-btn" href="#contact">
+                            <span class="material-symbols-outlined" style="font-size:18px;">mail</span>
+                            Let's Connect
+                        </a>
+                        <a class="btn btn-outline magnetic-btn" href="https://github.com/basemahmedofficial0-a11y" target="_blank" rel="noopener noreferrer">
+                            View Github
+                            <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-side reveal-right">
+                    <div class="hero-img-container" id="hero-image" role="button" aria-label="Click to view full image" tabindex="0">
+                        <img alt="Basem Ahmed — Software Developer" loading="eager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFZCN3SLPjYfnzHV4OvDnN-bAe7ysgiogkU72DqScjFJmCK5_HfCaOy35V4bc9d2XavNvcZvQnhFZObRChQ9CYRQBiGCodJZe4b5TDsf0doDp3DM_pnqPLyu195Mv5omP_To897CRbFZnvDl2hWH99e6J_9A8EDwYV_CE3Z9uYWsKTWmd4el0pXhgNRyzd7V0-g6cY_I7GHLiV_PtyErXUOnWl9Uxs5xigIwce9PhTtZPpeN4yG8dxSnd76jOOTq4LXvZAtIHF9xhX"/>
+                        <div class="hero-img-overlay"></div>
+                        <div class="hero-img-hint">
+                            <span class="material-symbols-outlined" style="font-size:14px;">zoom_in</span>
+                            Click to expand
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== STATS COUNTER ====== -->
+        <section class="container reveal" style="position:relative;z-index:10;margin-top:-2rem;margin-bottom:2rem;">
+            <div class="glass-card stats-row" style="box-shadow:0 20px 40px -10px rgba(0,0,0,0.5);">
+                <div class="counter-card">
+                    <div class="counter-value" data-target="500" data-suffix="+">0</div>
+                    <p class="counter-label">Hours of Code</p>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-value" data-target="10" data-suffix="+">0</div>
+                    <p class="counter-label">Projects Built</p>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-value" data-target="1" data-suffix="">0</div>
+                    <p class="counter-label">Year Volunteering</p>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-value" data-target="100" data-suffix="%">0</div>
+                    <p class="counter-label">Passion Driven</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== ABOUT ====== -->
+        <section class="section-padding" id="about" data-nav-section="about">
+            <div class="container">
+                <div class="glass-card about-card reveal-scale" style="box-shadow:0 20px 40px -10px rgba(0,0,0,0.5);">
+                    <div class="glow"></div>
+                    <div class="about-grid">
+                        <div class="reveal-left">
+                            <span class="text-label-sm section-label">Who I Am</span>
+                            <h2 class="text-headline-lg" style="color:#f0e0d2;margin-bottom:1.5rem;">A Developer<br/>Who Delivers.</h2>
+                            <div class="accent-line"></div>
+                        </div>
+                        <div class="about-body reveal-right">
+                            <p>
+                                I'm a Computer Science undergraduate at Benha University with a relentless drive to build software that makes an impact. My foundation in <strong>C++ and object-oriented design</strong> gives me the algorithmic rigor to tackle complex challenges, while my expertise in <strong>HTML5 and CSS3</strong> empowers me to craft pixel-perfect user interfaces that are as functional as they are beautiful.
+                            </p>
+                            <p>
+                                What sets me apart is my forward-looking mindset. I don't just write code — I architect <strong>AI-powered workflows</strong>, leverage prompt engineering to 10× productivity, and continuously push the boundaries of what's possible with emerging technologies. I'm looking for a team that values innovation, and I'm ready to contribute from day one.
+                            </p>
+                            <div class="info-chips">
+                                <span class="info-chip">
+                                    <span class="material-symbols-outlined">location_on</span> Benha, Egypt
+                                </span>
+                                <span class="info-chip">
+                                    <span class="material-symbols-outlined">school</span> CS @ Benha University
+                                </span>
+                                <span class="info-chip">
+                                    <span class="material-symbols-outlined">language</span> Arabic · English
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SKILLS ====== -->
+        <section class="section-padding" id="skills" data-nav-section="skills">
+            <div class="container">
+                <div class="text-center mb-12 reveal">
+                    <span class="text-label-sm section-label" style="display:inline-block;margin-bottom:1rem;">My Arsenal</span>
+                    <h2 class="text-headline-lg" style="color:#f0e0d2;">Technical &amp; Soft Skills</h2>
+                    <p class="text-body-md max-w-xl mx-auto mt-4" style="color:#dac2ae;">A curated toolkit of technologies and personal strengths I bring to every project.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Technical Skills -->
+                    <div class="glass-card skills-card reveal-left" style="box-shadow:0 20px 40px -10px rgba(0,0,0,0.5);">
+                        <div class="skills-card-header">
+                            <span class="material-symbols-outlined">code</span>
+                            <h3 class="text-headline-md" style="color:#f0e0d2;">Technical Skills</h3>
+                        </div>
+                        <div>
+                            <h4 class="text-label-sm skill-category-label" style="color:#dac2ae;">Web Technologies</h4>
+                            <div class="skill-chips stagger-children">
+                                <span class="skill-chip">HTML5</span>
+                                <span class="skill-chip">CSS3</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-label-sm skill-category-label" style="color:#dac2ae;">Programming &amp; OS</h4>
+                            <div class="skill-chips stagger-children">
+                                <span class="skill-chip">C++</span>
+                                <span class="skill-chip">Linux (Ubuntu)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-label-sm skill-category-label" style="color:#dac2ae;">Tools &amp; Methodologies</h4>
+                            <div class="skill-chips stagger-children">
+                                <span class="skill-chip">Git &amp; GitHub</span>
+                                <span class="skill-chip">Prompt Engineering</span>
+                                <span class="skill-chip">Microsoft Office Suite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="glass-card skills-card reveal-right" style="box-shadow:0 20px 40px -10px rgba(0,0,0,0.5);">
+                        <div class="skills-card-header">
+                            <span class="material-symbols-outlined">psychology</span>
+                            <h3 class="text-headline-md" style="color:#f0e0d2;">Soft Skills</h3>
+                        </div>
+                        <ul class="soft-skills-list stagger-children">
+                            <li class="soft-skill-item">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <span>Analytical Thinking</span>
+                            </li>
+                            <li class="soft-skill-item">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <span>Critical Problem-Solving</span>
+                            </li>
+                            <li class="soft-skill-item">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <span>Creative Innovation</span>
+                            </li>
+                            <li class="soft-skill-item">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <span>Confident Decision-Making</span>
+                            </li>
+                            <li class="soft-skill-item">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <span>Strategic Planning</span>
+                            </li>
+                            <li class="soft-skill-item">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                <span>Collaborative Leadership</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== EXPERIENCE & VOLUNTEER ====== -->
+        <section class="section-padding" id="experience" data-nav-section="experience">
+            <div class="container">
+                <div class="experience-grid">
+                    <!-- Education -->
+                    <div class="reveal-left">
+                        <span class="text-label-sm section-label" style="display:inline-block;margin-bottom:1rem;">My Journey</span>
+                        <h2 class="text-headline-lg mb-8" style="color:#f0e0d2;">Education</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot amber"></div>
+                                <div class="glass-card timeline-card" style="box-shadow:0 20px 40px -10px rgba(0,0,0,0.5);">
+                                    <span class="text-label-sm timeline-date">Aug 2025 — Present</span>
+                                    <h3 class="text-headline-md timeline-title">B.Sc. in Computer Science</h3>
+                                    <p class="text-body-md timeline-subtitle">Benha University — Faculty of Computers &amp; Artificial Intelligence</p>
+                                    <p class="text-body-md timeline-body">
+                                        Building a rigorous foundation in software engineering, data structures, and algorithm design with a focus on <strong>Object-Oriented Programming in C++</strong>. Actively applying classroom theory to real-world projects and open-source contributions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Volunteer -->
+                    <div id="volunteer" data-nav-section="volunteer" class="reveal-right">
+                        <span class="text-label-sm section-label" style="display:inline-block;margin-bottom:1rem;">Giving Back</span>
+                        <h2 class="text-headline-lg mb-8" style="color:#f0e0d2;">Volunteer Work</h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot gold"></div>
+                                <div class="glass-card timeline-card" style="box-shadow:0 20px 40px -10px rgba(0,0,0,0.5);">
+                                    <span class="text-label-sm timeline-date gold-text">May 2023 — Aug 2024</span>
+                                    <h3 class="text-headline-md timeline-title">Community Volunteer</h3>
+                                    <p class="text-body-md timeline-subtitle">Life Makers Foundation · Benha, Egypt</p>
+                                    <p class="text-body-md timeline-body" style="margin-bottom:0.75rem;">
+                                        Served as a key member of a dynamic youth initiative, leading on-the-ground efforts to support underserved families across the Benha region.
+                                    </p>
+                                    <ul class="timeline-list">
+                                        <li>
+                                            <span class="material-symbols-outlined">arrow_right</span>
+                                            <span>Coordinated community aid distribution for 100+ families</span>
+                                        </li>
+                                        <li>
+                                            <span class="material-symbols-outlined">arrow_right</span>
+                                            <span>Earned multiple certificates of appreciation for outstanding service</span>
+                                        </li>
+                                        <li>
+                                            <span class="material-symbols-outlined">arrow_right</span>
+                                            <span>Sharpened communication, adaptability, and cross-functional teamwork</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER / CONTACT
+         ============================================ -->
+    <footer class="footer" id="contact" data-nav-section="contact">
+        <div class="container section-padding reveal">
+            <div class="footer-cta">
+                <span class="text-label-sm section-label" style="display:inline-block;margin-bottom:1rem;">What's Next?</span>
+                <h2 class="text-headline-lg mb-4" style="color:#f0e0d2;">Let's Build Something Great.</h2>
+                <p class="text-body-lg">
+                    I'm actively seeking opportunities where I can contribute, grow, and make a meaningful impact. Whether it's a collaboration, internship, or full-time role — I'd love to hear from you.
+                </p>
+                <a class="btn btn-primary btn-large magnetic-btn" href="mailto:basemahmed0110@gmail.com">
+                    <span class="material-symbols-outlined" style="font-size:20px;">mail</span>
+                    Say Hello
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="text-body-md text-muted">
+                    © 2025 Basem Ahmed. Engineered with precision and creative intent.
+                </div>
+                <div class="footer-links">
+                    <a class="footer-link" href="https://www.linkedin.com/in/basem-ahmed-ramadan/" target="_blank" rel="noopener noreferrer">
+                        LinkedIn <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                    <span class="footer-divider">|</span>
+                    <a class="footer-link" href="https://github.com/basemahmedofficial0-a11y" target="_blank" rel="noopener noreferrer">
+                        GitHub <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                    <span class="footer-divider">|</span>
+                    <a class="footer-link" href="mailto:basemahmed0110@gmail.com">
+                        Email <span class="material-symbols-outlined">mail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
